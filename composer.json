@@ -1,0 +1,16 @@
+{
+  "name": "skoolboi434/workopia-v3",
+  "description": "Job Listing Application",
+  "authors": [
+    {
+      "name": "Travis Davis",
+      "email": "skoolboi434@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Framework\\": "Framework/",
+      "App\\": "App/"
+    }
+  }
+}

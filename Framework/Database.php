@@ -1,5 +1,9 @@
 <?php
 
+namespace Framework;
+
+use PDO;
+
 final class Database
 {
   public $conn;
