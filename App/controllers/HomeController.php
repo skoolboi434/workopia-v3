@@ -13,11 +13,11 @@ class HomeController
     $this->db = new Database($config);
   }
 
-   /**
-    * Show all listings
-    
-    * @return void
-    */
+  /**
+   * Show all listings
+   
+   * @return void
+   */
 
   public function index()
   {

@@ -12,10 +12,11 @@
         Back To Listings
       </a>
       <div class="flex space-x-4 ml-4">
-        <a href="/edit"
+        <a href="/listings/edit/<?= $listing->id ?>"
           class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded">Edit</a>
         <!-- Delete Form -->
         <form method="POST">
+          <input type="hidden" name="_method" value="DELETE">
           <button type="submit"
             class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded">Delete</button>
         </form>
@@ -38,10 +39,14 @@
           <?= $listing->city ?>,
           <?= $listing->state ?>
         </li>
-        <li class="mb-2">
+        <?php if (!empty($listing->tags)): ?>
+        <li class="mb-2 text-capitalize">
           <strong>Tags:</strong>
-          <?= $listing->tags ?>
+          <span>
+            <?= $listing->tags; ?>
+          </span>
         </li>
+        <?php endif; ?>
       </ul>
     </div>
   </div>
